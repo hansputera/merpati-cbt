@@ -1,17 +1,15 @@
-import jwt from "@elysiajs/jwt";
 import { Elysia } from "elysia";
+import { elysiaApi } from "./routes/api/api";
 import { configEnv } from "./config/config";
 
-const app = new Elysia().use(
-	jwt({
-		name: "jwt",
-		secret: configEnv.JWT_SECRET,
-		iss: "Merpati-CBT",
-		aud: "Authentication",
-		exp: "8h",
-	}),
-);
+const app = new Elysia();
+app.use(elysiaApi);
 
-console.log(
-	`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`,
-);
+app.listen({
+	port: configEnv.PORT,
+	hostname: configEnv.HOST,
+}, (server) => {
+	console.log(
+		`🦊 Elysia is running at ${server.hostname}:${server.port}`,
+	);
+});

@@ -5,7 +5,7 @@ import {
 	uniqueIndex,
 	varchar,
 } from "drizzle-orm/pg-core";
-import { Roles } from "../../enums/roles";
+import { Roles } from "@/enums/roles";
 
 export const userSchema = pgTable(
 	"users",

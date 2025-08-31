@@ -1,5 +1,5 @@
 import { integer, pgTable, timestamp, varchar } from "drizzle-orm/pg-core";
-import { SchoolStatuses } from "../../enums/schoolStatus";
+import { SchoolStatuses } from "@/enums/schoolStatus";
 
 export const schoolSchemas = pgTable("schools", {
 	id: integer().primaryKey().generatedByDefaultAsIdentity(),
