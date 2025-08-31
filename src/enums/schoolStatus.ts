@@ -1,4 +1,4 @@
 export enum SchoolStatuses {
-    Active = 'active',
-    Inactive = 'inactive',
+	Active = "active",
+	Inactive = "inactive",
 }
