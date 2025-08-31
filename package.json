@@ -4,14 +4,23 @@
 	"scripts": {
 		"format": "biome format --write ./src",
 		"lint": "biome lint --write ./src",
-		"dev": "bun run --watch src/index.ts"
+		"dev": "bun run --watch src/index.ts",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate"
 	},
 	"dependencies": {
-		"elysia": "latest"
+		"dotenv": "^17.2.1",
+		"drizzle-orm": "^0.44.5",
+		"elysia": "latest",
+		"envalid": "^8.1.0",
+		"pg": "^8.16.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.2",
-		"bun-types": "latest"
+		"@types/pg": "^8.15.5",
+		"bun-types": "latest",
+		"drizzle-kit": "^0.31.4",
+		"tsx": "^4.20.5"
 	},
 	"module": "src/index.js"
 }
