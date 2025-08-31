@@ -8,6 +8,13 @@
       "when": 1756636760530,
       "tag": "0000_windy_wasp",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1756636876034,
+      "tag": "0001_mighty_triton",
+      "breakpoints": true
     }
   ]
 }
